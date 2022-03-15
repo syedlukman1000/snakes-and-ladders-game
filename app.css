@@ -1,0 +1,811 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    
+    background: url(bg3.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+
+    height: 100%;
+    min-height: 100%;
+    
+
+
+    
+    
+}
+h1{
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 50px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+ 
+
+
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+.pawn{
+    position: absolute;
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+    transition-property: left;
+    transition: 0.5s;
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    
+    
+}
+.b{
+    
+    z-index: 0;
+    width: 40%;
+    margin-left: 15%;
+    
+    position: absolute;
+}
+
+.pawn1,.pawn2,.pawn3{
+    position: absolute;
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+    transition-property: left;
+    transition: 0.5s;
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    
+}
+
+
+
+
+
+
+
+
+.player1div,.player2div,.player3div,.player4div{
+    display: none;
+    align-items: center;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+
+}
+.roll1,.roll2,.roll3,.roll4{
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-left: 10px;
+    
+    height: 30px;
+    background-color: #1f85de;
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+}
+.roll1:hover,.roll2:hover,.roll3:hover,.roll4:hover{
+    transition: 0.5s;
+    background-color: #00559f;
+    
+}
+.player1img,.player2img,.player3img,.player4img{
+    height: 40px;
+}
+.roll1val,.roll2val,.roll3val,.roll4val{
+    margin-left: 10px;
+}
+
+
+
+.rolls{
+    display: none;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );   
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 50px;
+
+
+    
+    margin-top: 200px;
+    float: right;
+    width: 15%;
+    
+    margin-right: 15%;
+    flex-direction: column;
+    
+    font-size: 20px;
+    
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+    width: 20%;
+    float: right;
+    margin-right: 15%;
+    padding: 20px;
+    justify-content: space-evenly;
+    font-size: 15px;
+
+
+    font-family: 'Alegreya', serif;
+}
+.start{
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #1f85de;
+    margin-top: 20px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.start:hover{
+    background-color: #00559f;
+}
+
+footer{
+    margin-top: 50%;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    background-color: rgb(0,0,0,0.7);
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Alegreya', serif;
+
+
+    
+}
+
+.madeby{
+    margin-bottom: 0px;
+    
+
+}
+select{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+
+    
+}
+
+.names{
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.gameover{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.restart{
+    background-color: #1f85de;
+    border: none;
+    border-radius: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+}
+.restart:hover{
+    background-color: #00559f;;
+}
+
+
+@media (max-width: 1700px){
+    .rolls{
+        display: none;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );   
+        padding: 10px;
+        padding-right: 50px;
+    
+    
+        
+        margin-top: 150px;
+        float: right;
+        width: 20%;
+        
+        margin-right: 15%;
+        flex-direction: column;
+        
+        font-size: 15px;
+        
+    }
+}
+
+@media (max-width: 1200px){
+    .rolls{
+        display: none;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );   
+        padding: 10px;
+        padding-right: 50px;
+    
+    
+        
+        margin-top: 150px;
+        float: right;
+        width: 20%;
+        
+        margin-right: 15%;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 15px;
+        
+    }
+
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+        width: 20%;
+        float: right;
+        margin-right: 15%;
+        padding: 20px;
+        justify-content: space-evenly;
+        font-size: 15px;
+    
+    
+        font-family: 'Arvo', serif;
+    }
+
+
+    
+    
+}
+
+
+
+@media (max-width: 900px){
+    .b{
+    
+        z-index: 0;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 150px;
+        
+        position: absolute;
+    }
+
+    body{
+    
+        background: url(bg3.jpg) no-repeat center center fixed; 
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+        background-size: cover;
+        color: white;
+        padding: 0px;
+        margin: 0px;
+
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+        margin-left: 27%;
+        margin-right: 27%;
+        width: 40%;
+        padding: 20px;
+        justify-content: space-evenly;
+    
+    
+        font-family: 'Arvo', serif;
+    }
+
+    footer{
+        margin-top: 150%;
+
+        
+    
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       
+       background-color: rgb(0,0,0,0.7);
+       width: 100%;
+       font-size: 20px;
+       font-family: 'Alegreya', serif;
+    }
+
+
+    .rolls{
+        display: none;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );   
+        
+        width: 20%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 15%;
+        padding-left: 10px;
+    
+    
+        
+        margin-top: 900px;
+        float: right;
+        align-items: flex-start;
+        
+        margin-right: 10%;
+        flex-direction: column;
+        
+    }
+
+
+    h1{
+        font-family: 'Permanent Marker', cursive;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        font-size: 35px;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+
+@media (max-width: 800px){
+    .rolls{
+        display: none;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );   
+        width: 30%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 8%;
+        padding-left: 2%;
+    
+    
+        
+        margin-top: 830px;
+        float: right;
+        
+        margin-right: 10%;
+        flex-direction: column;
+        
+    }
+
+    h1{
+        font-family: 'Permanent Marker', cursive;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        font-size: 30px;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+}
+@media (max-width: 700px){
+    .rolls{
+        display: none;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );   
+        width: 30%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10%;
+        padding-left: 1%;
+    
+    
+        
+        margin-top: 730px;
+        float: right;
+        
+        margin-right: 10%;
+        flex-direction: column;
+        
+    }
+
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+        width: 70%;
+        float: right;
+        margin-right: 10%;
+        margin-left: 10%;
+        padding: 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 5%;
+        padding-left: 5% ;
+        
+        justify-content: space-evenly;
+        font-size: 15px;
+    
+    
+        font-family: 'Arvo', serif;
+    }
+
+
+    footer{
+        margin-top: 200%;
+
+        
+    
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       
+       background-color: rgb(0,0,0,0.7);
+       width: 100%;
+       font-size: 15px;
+       font-family: 'Alegreya', serif;
+    }
+
+
+    
+
+}
+
+
+@media (max-width: 600px){
+    .rolls{
+        display: none;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );   
+        width: 37%;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 10%;
+        padding-left: 1%;
+    
+    
+        
+        margin-top: 650px;
+        float: right;
+        
+        margin-right: 10%;
+        flex-direction: column;
+        
+    }
+
+    .roll1,.roll2,.roll3,.roll4{
+        width: 30%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 10px;
+        padding-right: 0px;
+        padding-left: 0px;
+        
+        height: 30px;
+        background-color: #1f85de;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+    
+    }
+
+    .player1img,.player2img,.player3img,.player4img{
+        width: 20%;
+        height: auto;
+    }
+
+    
+
+    h1{
+        font-family: 'Permanent Marker', cursive;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        font-size: 25px;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+
+
+}
+
+@media (max-width: 500px){
+    .rolls{
+        display: none;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );   
+        width: 37%;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 10%;
+        padding-left: 1%;
+    
+    
+        
+        margin-top: 600px;
+        float: right;
+        
+        margin-right: 10%;
+        flex-direction: column;
+        
+    }
+
+    .roll1,.roll2,.roll3,.roll4{
+        width: 30%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 10px;
+        padding-right: 0px;
+        padding-left: 0px;
+        
+        height: 30px;
+        background-color: #1f85de;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+    
+    }
+
+    .player1img,.player2img,.player3img,.player4img{
+        width: 20%;
+        height: auto;
+    }
+    footer{
+        margin-top: 200%;
+
+        
+    
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       
+       background-color: rgb(0,0,0,0.7);
+       width: 100%;
+       font-size: 15px;
+       font-family: 'Alegreya', serif;
+    }
+
+
+   
+
+}
+
+@media(max-width:450px){
+    .rolls{
+        display: none;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );   
+        width: 60%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 15%;
+        padding-left: 5%;
+    
+    
+        
+        margin-top: 550px;
+        float: right;
+        
+        margin-right: 10%;
+        flex-direction: column;
+        
+    }
+
+    .roll1,.roll2,.roll3,.roll4{
+        width: 30%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 10px;
+        padding-right: 0px;
+        padding-left: 0px;
+        
+        height: 30px;
+        background-color: #1f85de;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+    
+    }
+
+    .player1img,.player2img,.player3img,.player4img{
+        width: 20%;
+        height: auto;
+    }
+
+}
+
+
+@media (max-width: 400px){
+    .rolls{
+        display: none;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );   
+        width: 60%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 15%;
+        padding-left: 5%;
+    
+    
+    
+        
+        margin-top: 500px;
+        float: right;
+        
+        margin-right: 10%;
+        flex-direction: column;
+        
+    }
+
+
+    footer{
+        margin-top: 220%;
+
+        
+    
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       
+       background-color: rgb(0,0,0,0.7);
+       width: 100%;
+       font-size: 11px;
+       font-family: 'Alegreya', serif;
+    }
+
+
+
+    
+
+}
+
+
+@media (max-width: 388px){
+    
+    select{
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 46%;
+        margin-right: 27%;
+        margin-left: 27%;
+        margin-top: 5px;
+    }
+
+    .nop{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+    }
+}
+@media (max-width: 350px){
+    .rolls{
+        display: none;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );   
+        width: 60%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 15%;
+        padding-left: 5%;
+    
+    
+    
+        
+        margin-top: 450px;
+        float: right;
+        
+        margin-right: 10%;
+        flex-direction: column;
+        
+    }
+
+}

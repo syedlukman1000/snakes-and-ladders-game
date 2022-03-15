@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snakes and ladders</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <h1>SNAKES AND LADDERS</h1>
+
+
+    <div class="board">
+        <img src="11.png" class='pawn' alt="">
+        <img src="22.png" class='pawn1' alt="">
+        <img src="3.png" class='pawn2' alt="">
+        <img src="4.png" class='pawn3' alt="">
+        <img src="sal.jpg" class='b' alt="">
+    </div>
+    <div class="rolls">
+        <div class="player1div">
+            <img src="11.png" class='player1img' alt="">
+            <p class="player1">player1</p>
+            <button class="roll1">roll</button>
+            <p class="roll1val"></p>
+        </div>
+        <div class="player2div">
+            <img src="22.png" alt="" class='player2img'>
+            <p class="player2">player2</p>
+            <button class="roll2">roll</button>
+            <p class="roll2val"></p>
+        </div>
+        <div class="player3div">
+            <img src="3.png" alt="" class='player3img'>
+            <p class="player3">player3</p>
+            <button class="roll3">roll</button>
+            <p class="roll3val"></p>
+        </div>
+        <div class="player4div">
+            <img src="4.png" alt="" class='player4img'>
+            <p class="player4">player4</p>
+            <button class="roll4">roll</button>
+            <p class="roll4val"></p>
+        </div>
+
+        <div class='gameover'>
+            <p>GAME OVER</p>
+            <a href=""><button class="restart">RESTART</button></a>
+        </div>
+    </div>
+
+
+    <form action="">
+        <div class='nop'>
+            <label for="players">select number of players : </label>
+            <select name="players" id="players" form="carform">
+
+                <option value="2">Two Players</option>
+                <option value="3">Three players</option>
+                <option value="4">Four Players</option>
+
+            </select>
+        </div>
+        <button class="start">START</button>
+
+
+    </form>
+
+    <footer>
+        <p class="madeby">Made By</p>
+        <p class="names"> Syed Lukman | SaiKrishna | Srinath | Sukumar | Srikanth </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
